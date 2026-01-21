@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46 Industrial Sensors - Complete Technical Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Complete Guide to 46 Industrial Sensors</h1>
+            <p class="subtitle">Comprehensive Technical Documentation for Manufacturing & Industrial Applications</p>
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">46</div>
+                    <div>Sensor Types</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">250+</div>
+                    <div>Applications</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">150+</div>
+                    <div>Manufacturers</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-filter-container">
+            <input type="text" id="searchInput" placeholder="🔍 Search sensors by name, type, principle, or application...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Sensors</button>
+                <button class="filter-btn" data-filter="temperature">Temperature</button>
+                <button class="filter-btn" data-filter="flow">Flow</button>
+                <button class="filter-btn" data-filter="pressure">Pressure</button>
+                <button class="filter-btn" data-filter="level">Level</button>
+                <button class="filter-btn" data-filter="optical">Optical/Vision</button>
+                <button class="filter-btn" data-filter="measurement">Measurement</button>
+            </div>
+        </div>
+
+        <div class="sensor-grid" id="sensorGrid"></div>
+
+        <div class="footer">
+            <h3>📚 Industrial Sensor Reference Guide</h3>
+            <p>Compiled from tire manufacturing industry specifications | Last Updated: January 2025</p>
+            <p>⭐ <a href="https://github.com/yourusername/sensor-guide" target="_blank">Star this repository on GitHub</a></p>
+        </div>
+    </div>
+
+    <div id="sensorModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
