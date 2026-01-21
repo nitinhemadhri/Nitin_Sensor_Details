@@ -213,7 +213,6 @@ const sensorsData = [
         ],
         industry: "Mixer - Final QC"
     },
-    // Continue with sensors 11-46...
     {
         id: 11,
         name: "Turbine Flow Meter",
@@ -379,59 +378,51 @@ const sensorsData = [
             { name: "Brüel & Kjær", model: "2250", price: "₹1,50,000-3,50,000" },
             { name: "Extech", model: "407768", price: "₹15,000-35,000" },
             { name: "PCE", model: "318", price: "₹12,000-25,000" }
-],
-industry: "General - All areas"
-},
-{
-id: 19,
-name: "Optical Dust Sensor",
-type: "Particle Detection",
-category: "optical",
-principle: "Light scattering - intensity ∝ concentration",
-medium: "Air particulates",
-applications: ["Dust level monitoring", "Air quality", "Environmental compliance"],
-specs: {
-range: "0-1000 μg/m³",
-particles: "0.3-10 μm",
-response: "<10s",
-output: "UART, PWM"
-},
-manufacturers: [
-{ name: "Plantower", model: "PMS5003", price: "₹1,500-3,500" },
-{ name: "Nova SDS", model: "SDS011", price: "₹1,200-3,000" },
-{ name: "Honeywell", model: "HPMA115", price: "₹2,500-5,000" }
-],
-industry: "General - All areas"
-},
-{
-id: 20,
-name: "Sheet Laser System",
-type: "2D Profile/Thickness",
-category: "measurement",
-principle: "Laser line projection with CCD imaging",
-medium: "Non-contact optical",
-applications: ["Compound gauge", "Sheet thickness", "Profile measurement"],
-specs: {
-range: "0.1-50mm",
-resolution: "±5 μm",
-scanWidth: "50-500mm",
-frequency: "100-4000 Hz"
-},
-manufacturers: [
-{ name: "Keyence", model: "LJ-X8000", price: "₹3,50,000-7,00,000" },
-{ name: "Micro-Epsilon", model: "scanCONTROL", price: "₹2,80,000-6,00,000" },
-{ name: "Sick", model: "Ranger3", price: "₹2,50,000-5,50,000" }
-],
-industry: "Stock - Feed Mill"
-}
-
-
-// Complete sensor database with all 46 sensors
-const sensorsData = [
-    // Sensors 1-20 (already provided above, keep them)
-    // ... (keep sensors 1-20 from previous code)
-    
-    // SENSORS 21-46 - ADD THESE:
+        ],
+        industry: "General - All areas"
+    },
+    {
+        id: 19,
+        name: "Optical Dust Sensor",
+        type: "Particle Detection",
+        category: "optical",
+        principle: "Light scattering - intensity ∝ concentration",
+        medium: "Air particulates",
+        applications: ["Dust level monitoring", "Air quality", "Environmental compliance"],
+        specs: {
+            range: "0-1000 μg/m³",
+            particles: "0.3-10 μm",
+            response: "<10s",
+            output: "UART, PWM"
+        },
+        manufacturers: [
+            { name: "Plantower", model: "PMS5003", price: "₹1,500-3,500" },
+            { name: "Nova SDS", model: "SDS011", price: "₹1,200-3,000" },
+            { name: "Honeywell", model: "HPMA115", price: "₹2,500-5,000" }
+        ],
+        industry: "General - All areas"
+    },
+    {
+        id: 20,
+        name: "Sheet Laser System",
+        type: "2D Profile/Thickness",
+        category: "measurement",
+        principle: "Laser line projection with CCD imaging",
+        medium: "Non-contact optical",
+        applications: ["Compound gauge", "Sheet thickness", "Profile measurement"],
+        specs: {
+            range: "0.1-50mm",
+            resolution: "±5 μm",
+            scanWidth: "50-500mm",
+            frequency: "100-4000 Hz"
+        },
+        manufacturers: [
+            { name: "Keyence", model: "LJ-X8000", price: "₹3,50,000-7,00,000" },
+            { name: "Micro-Epsilon", model: "scanCONTROL", price: "₹2,80,000-6,00,000" },
+            { name: "Sick", model: "Ranger3", price: "₹2,50,000-5,50,000" }
+        ],
+        industry: "Stock - Feed Mill"
+    },
     {
         id: 21,
         name: "Force/Tension Sensor",
@@ -602,421 +593,401 @@ const sensorsData = [
             { name: "Sick", model: "W4S, WTB4", price: "₹3,500-18,000" },
             { name: "Keyence", model: "PZ-G Series", price: "₹4,500-22,000" },
             { name: "Banner", model: "Q4X", price: "₹5,000-20,000" },
-            { name: "Omron", model: "E3Z", price: "₹3,000-15,000" }
-        ],
-        industry: "Stock - 4 Roll Safety/Detection"
-    },
-    {
-        id: 29,
-        name: "Humidity Sensor",
-        type: "Relative Humidity",
-        category: "measurement",
-        principle: "Capacitive/resistive hygrometer - moisture absorption changes properties",
-        medium: "Ambient air",
-        applications: ["External humidity monitoring", "Environmental control", "Process air quality"],
-        specs: {
-            range: "0-100% RH",
-            accuracy: "±2-3% RH",
-            tempRange: "-40 to 85°C",
-            output: "4-20mA, 0-10V"
-        },
-        manufacturers: [
-            { name: "Vaisala", model: "HMP110", price: "₹25,000-55,000" },
-            { name: "E+E Elektronik", model: "EE23", price: "₹18,000-42,000" },
-            { name: "Rotronic", model: "HC2A", price: "₹22,000-50,000" },
-            { name: "Honeywell", model: "HIH Series", price: "₹15,000-38,000" }
-        ],
-        industry: "General - All areas"
-    },
-    {
-        id: 30,
-        name: "Profilometer",
-        type: "Surface Profile/Thickness",
-        category: "measurement",
-        principle: "Laser triangulation scanning across width",
-        medium: "Non-contact optical",
-        applications: ["Profile measurement", "Inner liner thickness", "Tread profile", "Surface topology"],
-        specs: {
-            range: "0.1-100mm thickness",
-            resolution: "±10-50 μm",
-            scanWidth: "Up to 1500mm",
-            scanRate: "100-2000 Hz"
-        },
-        manufacturers: [
-            { name: "Keyence", model: "LJ-X8000", price: "₹4,00,000-8,00,000" },
-            { name: "Micro-Epsilon", model: "scanCONTROL", price: "₹3,50,000-7,50,000" },
-            { name: "Cognex", model: "3D-A5000", price: "₹3,80,000-7,80,000" }
-        ],
-        industry: "Stock-TBR, Stock-PCR, Extruder"
-    },
-    {
-        id: 31,
-        name: "Width Sensor",
-        type: "Edge Detection/Width",
-        category: "measurement",
-        principle: "Laser/ultrasonic edge detection on both sides",
-        medium: "Non-contact optical/ultrasonic",
-        applications: ["Width detection of squeeze", "Cushion width", "Cut material width", "Web width"],
-        specs: {
-            range: "50mm to 3000mm",
-            accuracy: "±0.5mm to ±2mm",
-            response: "<100ms",
-            output: "4-20mA, Ethernet"
-        },
-        manufacturers: [
-            { name: "Beta LaserMike", model: "LaserSpeed", price: "₹2,50,000-5,50,000" },
-            { name: "Sick", model: "Bulkscan LMS", price: "₹2,00,000-4,80,000" },
-            { name: "Limab", model: "Width Gauge", price: "₹1,80,000-4,20,000" }
-        ],
-        industry: "Stock-TBR, Extruder"
-    },
-    {
-        id: 32,
-        name: "Encoder (Rotary)",
-        type: "Position/Speed Measurement",
-        category: "measurement",
-        principle: "Optical/magnetic pattern generates pulses - counts rotation",
-        medium: "Shaft coupling - rotational motion",
-        applications: ["Booking length measurement", "Speed feedback", "Position tracking", "Synchronization"],
-        specs: {
-            resolution: "100-10,000 PPR",
-            speed: "Up to 12,000 RPM",
-            output: "TTL, HTL, SSI, EnDat",
-            protection: "IP65-IP67"
-        },
-        manufacturers: [
-            { name: "Sick", model: "DFS60", price: "₹15,000-45,000" },
-            { name: "Baumer", model: "HOG 10", price: "₹18,000-50,000" },
-            { name: "Heidenhain", model: "ROD 426", price: "₹25,000-65,000" },
-            { name: "Omron", model: "E6B2", price: "₹12,000-35,000" }
-        ],
-        industry: "Stock-TBR - Chaffer Slitter"
-    },
-    {
-        id: 33,
-        name: "Current Sensor",
-        type: "AC/DC Current Measurement",
-        category: "measurement",
-        principle: "Hall effect or current transformer - magnetic field detection",
-        medium: "Non-contact around conductor",
-        applications: ["Chimney detection", "Motor current monitoring", "Power monitoring", "Overload detection"],
-        specs: {
-            range: "0-10A to 0-1000A",
-            accuracy: "±0.5-2%",
-            bandwidth: "DC to 100 kHz",
-            output: "4-20mA, 0-5V"
-        },
-        manufacturers: [
-            { name: "LEM", model: "LT Series", price: "₹8,000-25,000" },
-            { name: "Phoenix Contact", model: "MCR-SL-CUC", price: "₹6,500-20,000" },
-            { name: "ABB", model: "CS Series", price: "₹7,500-22,000" },
-            { name: "Schneider", model: "PowerLogic", price: "₹9,000-28,000" }
-        ],
-        industry: "Stock Extruder - Quintoplex"
-    },
-    {
-        id: 34,
-        name: "pH Sensor",
-        type: "Acidity/Alkalinity",
-        category: "measurement",
-        principle: "Glass electrode - ion-selective membrane generates potential",
-        medium: "Direct contact with liquid (cooling water)",
-        applications: ["Cooling line water pH", "Process water quality", "Chemical monitoring"],
-        specs: {
-            range: "pH 0-14",
-            accuracy: "±0.01-0.05 pH",
-            tempRange: "0-100°C",
-            output: "4-20mA, Profibus"
-        },
-        manufacturers: [
-            { name: "Endress+Hauser", model: "Orbisint CPS11", price: "₹35,000-75,000" },
-            { name: "Mettler Toledo", model: "InPro 4260i", price: "₹32,000-70,000" },
-            { name: "Yokogawa", model: "PH8EFP", price: "₹30,000-65,000" },
-            { name: "Hach", model: "pHD", price: "₹28,000-60,000" }
-        ],
-        industry: "Stock Extruder - Cooling lines"
-    },
-    {
-        id: 35,
-        name: "RFID System",
-        type: "Radio Frequency Identification",
-        category: "optical",
-        principle: "RF transponder communication - unique ID read/write",
-        medium: "Radio frequency (125 kHz, 13.56 MHz, UHF)",
-        applications: ["Die and preformer identification", "Tool tracking", "Component identification", "Process verification"],
-        specs: {
-            frequency: "125 kHz, 13.56 MHz, 860-960 MHz",
-            range: "10mm to 10m (varies)",
-            memory: "64 bytes to 8KB",
-            interface: "RS-232, Ethernet, Profinet"
-        },
-        manufacturers: [
-            { name: "Siemens", model: "RF600", price: "₹45,000-1,20,000" },
-            { name: "Balluff", model: "BIS M", price: "₹40,000-1,00,000" },
-            { name: "Turck", model: "RFID System", price: "₹38,000-95,000" },
-            { name: "Pepperl+Fuchs", model: "IQC21", price: "₹42,000-1,10,000" }
-        ],
-        industry: "Stock Extruder - Die identification"
-    },
-    {
-        id: 36,
-        name: "Inkjet Pattern Printing",
-        type: "Marking/Coding",
-        category: "optical",
-        principle: "DOD (Drop-on-Demand) or CIJ (Continuous Inkjet) printing",
-        medium: "Ink droplets on moving surface",
-        applications: ["Tread pattern printing", "Color ID verification", "Batch marking", "Date/code printing"],
-        specs: {
-            resolution: "300-600 DPI",
-            speed: "Up to 300 m/min",
-            colors: "1-4 colors",
-            substrate: "Rubber, fabric, metal"
-        },
-        manufacturers: [
-            { name: "Domino", model: "Ax Series", price: "₹3,50,000-8,00,000" },
-            { name: "Videojet", model: "1860", price: "₹3,80,000-8,50,000" },
-            { name: "Markem-Imaje", model: "9450", price: "₹4,00,000-9,00,000" },
-            { name: "KGK", model: "Alpha Jet", price: "₹2,80,000-6,50,000" }
-        ],
-        industry: "Stock Extruder - Quintoplex"
-    },
-    {
-        id: 37,
-        name: "Weighing Scale (Booking)",
-        type: "Batch Weight Measurement",
-        category: "measurement",
-        principle: "Load cell based platform scale",
-        medium: "Direct mechanical load",
-        applications: ["SW/SP weighing", "Batch weight verification", "Material quantity tracking"],
-        specs: {
-            capacity: "50kg to 2000kg",
-            accuracy: "±0.05-0.1%",
-            resolution: "5g to 50g",
-            output: "4-20mA, RS-485"
-        },
-        manufacturers: [
-            { name: "Mettler Toledo", model: "ICS Series", price: "₹80,000-2,50,000" },
-            { name: "Avery", model: "BSA Series", price: "₹65,000-1,80,000" },
-            { name: "Essae", model: "EA Series", price: "₹45,000-1,20,000" },
-            { name: "Sartorius", model: "Midrics", price: "₹75,000-2,00,000" }
-        ],
-        industry: "Stock Extruder - Quadraplex"
-    },
-    {
-        id: 38,
-        name: "Oil Level Sensor (Capacitive/Float)",
-        type: "Level Detection",
-        category: "level",
-        principle: "Capacitive proximity or float switch mechanism",
-        medium: "Hydraulic/gear box oil",
-        applications: ["Power pack oil level", "Leak detection", "Low level alarm", "Overfill protection"],
-        specs: {
-            type: "Point level switch",
-            output: "Relay, PNP/NPN",
-            pressure: "Up to 100 bar",
-            temp: "-40 to 150°C"
-        },
-        manufacturers: [
-            { name: "Endress+Hauser", model: "Liquipoint FTW23", price: "₹12,000-30,000" },
-            { name: "Vega", model: "VEGAPOINT 11", price: "₹10,000-25,000" },
-            { name: "Gems", model: "LS-7", price: "₹8,000-20,000" },
-            { name: "Madison", model: "Float Switch", price: "₹5,000-15,000" }
-        ],
-        industry: "Curing-PCR - Hydraulic presses"
-    },
-    {
-        id: 39,
-        name: "Portable Acoustic Sensor",
-        type: "Ultrasonic Leak Detection",
-        category: "measurement",
-        principle: "Ultrasonic microphone detects high-frequency hiss (25-40 kHz)",
-        medium: "Airborne ultrasound from leaks",
-        applications: ["Steam leak detection", "Nitrogen leakage", "Compressed air leaks", "Valve integrity"],
-        specs: {
-            frequency: "20-100 kHz (ultrasonic)",
-            sensitivity: "-40 to 0 dB",
-            display: "LCD with dB reading",
-            power: "Battery operated"
-        },
-        manufacturers: [
-            { name: "UE Systems", model: "Ultraprobe 15000", price: "₹1,20,000-2,50,000" },
-            { name: "SDT", model: "SDT270", price: "₹1,40,000-2,80,000" },
-            { name: "Fluke", model: "ii900", price: "₹2,50,000-4,50,000" },
-            { name: "PCE", model: "LD 1", price: "₹80,000-1,80,000" }
-        ],
-        industry: "Curing-PCR, Curing-TBR"
-    },
-    {
-        id: 40,
-        name: "Coriolis Flow Meter",
-        type: "Mass Flow/Density",
-        category: "flow",
-        principle: "Coriolis force on oscillating tubes - phase shift ∝ mass flow",
-        medium: "Any fluid - gas, liquid, slurry",
-        applications: ["Steam mass flow", "Precise weight measurement", "Multi-variable measurement", "Batch dosing"],
-        specs: {
-            accuracy: "±0.1-0.5% mass flow",
-            rangeability: "100:1 to 200:1",
-            density: "±0.0005 g/cm³",
-            output: "4-20mA, HART, Profibus"
-        },
-        manufacturers: [
-            { name: "Emerson Micro Motion", model: "F-Series", price: "₹2,50,000-6,00,000" },
-            { name: "Endress+Hauser", model: "Promass 83", price: "₹2,80,000-6,50,000" },
-            { name: "Siemens", model: "MASS 6000", price: "₹2,60,000-6,20,000" },
-            { name: "Krohne", model: "OPTIMASS 6400", price: "₹2,40,000-5,80,000" }
-        ],
-        industry: "Curing-PCR, Curing-TBR"
-    },
-    {
-        id: 41,
-        name: "2D Profilometer",
-        type: "2D Surface Profile",
-        category: "measurement",
-        principle: "Laser line scan imaging - creates cross-sectional profile",
-        medium: "Non-contact optical scanning",
-        applications: ["GT centering - T Ring expansion", "Surface topology", "Tread profile verification"],
-        specs: {
-            resolution: "±20-100 μm",
-            scanWidth: "100-2000mm",
-            scanRate: "100-1000 Hz",
-            output: "Ethernet, image data"
-        },
-        manufacturers: [
-            { name: "Keyence", model: "LJ-X8000 Series", price: "₹4,50,000-9,00,000" },
-            { name: "Cognex", model: "3D-A5000", price: "₹4,00,000-8,50,000" },
-            { name: "Micro-Epsilon", model: "scanCONTROL 3000", price: "₹3,80,000-8,00,000" }
-        ],
-        industry: "TBM-PCR - Shaping drum"
-    },
-    {
-        id: 42,
-        name: "Auto Laser Light (Alignment)",
-        type: "Alignment/Centering",
-        category: "optical",
-        principle: "Laser line projection for visual alignment reference",
-        medium: "Visible laser line",
-        applications: ["B&T drum centering", "Component alignment", "Reference line projection"],
-        specs: {
-            laserClass: "Class 2 (eye-safe)",
-            lineLength: "50-500mm",
-            wavelength: "635nm (red) or 520nm (green)",
-            power: "24VDC or battery"
-        },
-        manufacturers: [
-            { name: "Laser Tools", model: "Alignment Laser", price: "₹15,000-45,000" },
-            { name: "Banner", model: "LE550 Laser", price: "₹20,000-55,000" },
-            { name: "Omron", model: "ZG2 Laser", price: "₹18,000-50,000" },
-            { name: "Sick", model: "OLM100", price: "₹22,000-60,000" }
-        ],
-        industry: "TBM-PCR - 2nd stage"
-    },
-    {
-        id: 43,
-        name: "Component Spotting Sensor (TBD)",
-        type: "Component Detection",
-        category: "optical",
-        principle: "To be determined - likely vision/laser based detection",
-        medium: "Visual/optical detection",
-        applications: ["Component spotting on drum", "Position verification", "Presence detection"],
-        specs: {
-            status: "To be defined",
-            application: "2nd stage building",
-            technology: "Vision or laser (TBD)",
-            output: "Digital I/O"
-        },
-        manufacturers: [
-            { name: "TBD", model: "Custom Solution", price: "To be quoted" },
-            { name: "System Integrator", model: "Application Specific", price: "Project based" }
-        ],
-        industry: "TBM-PCR - 2nd stage building"
-    },
-    {
-        id: 44,
-        name: "Electromagnetic Flow Meter with Integrated Temperature",
-        type: "Flow + Temperature",
-        category: "flow",
-        principle: "EMF for flow + PT100/PT1000 for temperature in single device",
-        medium: "Conductive liquids",
-        applications: ["Water outlet flow + temperature", "Cooling systems", "Process water monitoring"],
-        specs: {
-            flowAccuracy: "±0.5%",
-            tempAccuracy: "±0.3°C",
-            output: "Dual 4-20mA or digital",
-            communication: "HART, Profibus, Modbus"
-        },
-        manufacturers: [
-            { name: "Siemens", model: "SITRANS FM MAG 6000", price: "₹55,000-1,40,000" },
-            { name: "Endress+Hauser", model: "Promag W", price: "₹60,000-1,50,000" },
-            { name: "Yokogawa", model: "ADMAG AXW", price: "₹58,000-1,45,000" },
-            { name: "Krohne", model: "OPTIFLUX 5300 C", price: "₹52,000-1,35,000" }
-        ],
-        industry: "Stock - 4 Roll, Extruder"
-    },
-    {
-        id: 45,
-        name: "Ultrasonic Sensor (Defect Detection)",
-        type: "Flaw Detection",
-        category: "measurement",
-        principle: "Ultrasonic pulse-echo - reflections from internal defects",
-        medium: "Ultrasound through material",
-        applications: ["Liner damage detection", "Internal flaw detection", "Delamination detection", "Thickness verification"],
-        specs: {
-            frequency: "1-15 MHz",
-            penetration: "Up to 500mm (material dependent)",
-            resolution: "0.1-1mm defect size",
-            method: "Pulse-echo, through-transmission"
-        },
-        manufacturers: [
-            { name: "Olympus", model: "38DL PLUS", price: "₹1,80,000-3,50,000" },
-            { name: "GE Inspection", model: "USM 36", price: "₹2,00,000-4,00,000" },
-            { name: "Sonatest", model: "Veo+", price: "₹1,50,000-3,20,000" },
-            { name: "NDT Systems", model: "Flaw Detector", price: "₹1,20,000-2,80,000" }
-        ],
-        industry: "Stock - 4 Roll Liner Rerolling"
-    },
-    {
-        id: 46,
-        name: "Float Level Sensor (Oil/Capacitive)",
-        type: "Level Switch",
-        category: "level",
-        principle: "Magnetic float actuates reed switch or capacitive detection",
-        medium: "Hydraulic/gear box oil",
-        applications: ["Oil level detection", "High/low level alarm", "Pump control", "Leak detection"],
-        specs: {
-            type: "Float switch or capacitive",
-            output: "SPDT relay, PNP/NPN",
-            pressure: "Up to 100 bar",
-            temperature: "-40 to 150°C"
-        },
-        manufacturers: [
-            { name: "Madison", model: "M1000 Series", price: "₹3,500-12,000" },
-            { name: "Gems Sensors", model: "LS-1900", price: "₹5,000-15,000" },
+            { name: "Omron", model: "E3Z", price: "₹3,000-15000" }
+],
+industry: "Stock - 4 Roll Safety/Detection"
+},
+{
+id: 29,
+name: "Humidity Sensor",
+type: "Relative Humidity",
+category: "measurement",
+principle: "Capacitive/resistive hygrometer - moisture absorption changes properties",
+medium: "Ambient air",
+applications: ["External humidity monitoring", "Environmental control", "Process air quality"],
+specs: {
+range: "0-100% RH",
+accuracy: "±2-3% RH",
+tempRange: "-40 to 85°C",
+output: "4-20mA, 0-10V"
+},
+manufacturers: [
+{ name: "Vaisala", model: "HMP110", price: "₹25,000-55,000" },
+{ name: "E+E Elektronik", model: "EE23", price: "₹18,000-42,000" },
+{ name: "Rotronic", model: "HC2A", price: "₹22,000-50,000" },
+{ name: "Honeywell", model: "HIH Series", price: "₹15,000-38,000" }
+],
+industry: "General - All areas"
+},
+{
+id: 30,
+name: "Profilometer",
+type: "Surface Profile/Thickness",
+category: "measurement",
+principle: "Laser triangulation scanning across width",
+medium: "Non-contact optical",
+applications: ["Profile measurement", "Inner liner thickness", "Tread profile", "Surface topology"],
+specs: {
+range: "0.1-100mm thickness",
+resolution: "±10-50 μm",
+scanWidth: "Up to 1500mm",
+scanRate: "100-2000 Hz"
+},
+manufacturers: [
+{ name: "Keyence", model: "LJ-X8000", price: "₹4,00,000-8,00,000" },
+{ name: "Micro-Epsilon", model: "scanCONTROL", price: "₹3,50,000-7,50,000" },
+{ name: "Cognex", model: "3D-A5000", price: "₹3,80,000-7,80,000" }
+],
+industry: "Stock-TBR, Stock-PCR, Extruder"
+},
+{
+id: 31,
+name: "Width Sensor",
+type: "Edge Detection/Width",
+category: "measurement",
+principle: "Laser/ultrasonic edge detection on both sides",
+medium: "Non-contact optical/ultrasonic",
+applications: ["Width detection of squeeze", "Cushion width", "Cut material width", "Web width"],
+specs: {
+range: "50mm to 3000mm",
+accuracy: "±0.5mm to ±2mm",
+response: "<100ms",
+output: "4-20mA, Ethernet"
+},
+manufacturers: [
+{ name: "Beta LaserMike", model: "LaserSpeed", price: "₹2,50,000-5,50,000" },
+{ name: "Sick", model: "Bulkscan LMS", price: "₹2,00,000-4,80,000" },
+{ name: "Limab", model: "Width Gauge", price: "₹1,80,000-4,20,000" }
+],
+industry: "Stock-TBR, Extruder"
+},
+{
+id: 32,
+name: "Encoder (Rotary)",
+type: "Position/Speed Measurement",
+category: "measurement",
+principle: "Optical/magnetic pattern generates pulses - counts rotation",
+medium: "Shaft coupling - rotational motion",
+applications: ["Booking length measurement", "Speed feedback", "Position tracking", "Synchronization"],
+specs: {
+resolution: "100-10,000 PPR",
+speed: "Up to 12,000 RPM",
+output: "TTL, HTL, SSI, EnDat",
+protection: "IP65-IP67"
+},
+manufacturers: [
+{ name: "Sick", model: "DFS60", price: "₹15,000-45,000" },
+{ name: "Baumer", model: "HOG 10", price: "₹18,000-50,000" },
+{ name: "Heidenhain", model: "ROD 426", price: "₹25,000-65,000" },
+{ name: "Omron", model: "E6B2", price: "₹12,000-35,000" }
+],
+industry: "Stock-TBR - Chaffer Slitter"
+},
+{
+id: 33,
+name: "Current Sensor",
+type: "AC/DC Current Measurement",
+category: "measurement",
+principle: "Hall effect or current transformer - magnetic field detection",
+medium: "Non-contact around conductor",
+applications: ["Chimney detection", "Motor current monitoring", "Power monitoring", "Overload detection"],
+specs: {
+range: "0-10A to 0-1000A",
+accuracy: "±0.5-2%",
+bandwidth: "DC to 100 kHz",
+output: "4-20mA, 0-5V"
+},
+manufacturers: [
+{ name: "LEM", model: "LT Series", price: "₹8,000-25,000" },
+{ name: "Phoenix Contact", model: "MCR-SL-CUC", price: "₹6,500-20,000" },
+{ name: "ABB", model: "CS Series", price: "₹7,500-22,000" },
+{ name: "Schneider", model: "PowerLogic", price: "₹9,000-28,000" }
+],
+industry: "Stock Extruder - Quintoplex"
+},
+{
+id: 34,
+name: "pH Sensor",
+type: "Acidity/Alkalinity",
+category: "measurement",
+principle: "Glass electrode - ion-selective membrane generates potential",
+medium: "Direct contact with liquid (cooling water)",
+applications: ["Cooling line water pH", "Process water quality", "Chemical monitoring"],
+specs: {
+range: "pH 0-14",
+accuracy: "±0.01-0.05 pH",
+tempRange: "0-100°C",
+output: "4-20mA, Profibus"
+},
+manufacturers: [
+{ name: "Endress+Hauser", model: "Orbisint CPS11", price: "₹35,000-75,000" },
+{ name: "Mettler Toledo", model: "InPro 4260i", price: "₹32,000-70,000" },
+{ name: "Yokogawa", model: "PH8EFP", price: "₹30,000-65,000" },
+{ name: "Hach", model: "pHD", price: "₹28,000-60,000" }
+],
+industry: "Stock Extruder - Cooling lines"
+},
+{
+id: 35,
+name: "RFID System",
+type: "Radio Frequency Identification",
+category: "optical",
+principle: "RF transponder communication - unique ID read/write",
+medium: "Radio frequency (125 kHz, 13.56 MHz, UHF)",
+applications: ["Die and preformer identification", "Tool tracking", "Component identification", "Process verification"],
+specs: {
+frequency: "125 kHz, 13.56 MHz, 860-960 MHz",
+range: "10mm to 10m (varies)",
+memory: "64 bytes to 8KB",
+interface: "RS-232, Ethernet, Profinet"
+},
+manufacturers: [
+{ name: "Siemens", model: "RF600", price: "₹45,000-1,20,000" },
+{ name: "Balluff", model: "BIS M", price: "₹40,000-1,00,000" },
+{ name: "Turck", model: "RFID System", price: "₹38,000-95,000" },
+{ name: "Pepperl+Fuchs", model: "IQC21", price: "₹42,000-1,10,000" }
+],
+industry: "Stock Extruder - Die identification"
+},
+{
+id: 36,
+name: "Inkjet Pattern Printing",
+type: "Marking/Coding",
+category: "optical",
+principle: "DOD (Drop-on-Demand) or CIJ (Continuous Inkjet) printing",
+medium: "Ink droplets on moving surface",
+applications: ["Tread pattern printing", "Color ID verification", "Batch marking", "Date/code printing"],
+specs: {
+resolution: "300-600 DPI",
+speed: "Up to 300 m/min",
+colors: "1-4 colors",
+substrate: "Rubber, fabric, metal"
+},
+manufacturers: [
+{ name: "Domino", model: "Ax Series", price: "₹3,50,000-8,00,000" },
+{ name: "Videojet", model: "1860", price: "₹3,80,000-8,50,000" },
+{ name: "Markem-Imaje", model: "9450", price: "₹4,00,000-9,00,000" },
+{ name: "KGK", model: "Alpha Jet", price: "₹2,80,000-6,50,000" }
+],
+industry: "Stock Extruder - Quintoplex"
+},
+{
+id: 37,
+name: "Weighing Scale (Booking)",
+type: "Batch Weight Measurement",
+category: "measurement",
+principle: "Load cell based platform scale",
+medium: "Direct mechanical load",
+applications: ["SW/SP weighing", "Batch weight verification", "Material quantity tracking"],
+specs: {
+capacity: "50kg to 2000kg",
+accuracy: "±0.05-0.1%",
+resolution: "5g to 50g",
+output: "4-20mA, RS-485"
+},
+manufacturers: [
+{ name: "Mettler Toledo", model: "ICS Series", price: "₹80,000-2,50,000" },
+{ name: "Avery", model: "BSA Series", price: "₹65,000-1,80,000" },
+{ name: "Essae", model: "EA Series", price: "₹45,000-1,20,000" },
+{ name: "Sartorius", model: "Midrics", price: "₹75,000-2,00,000" }
+],
+industry: "Stock Extruder - Quadraplex"
+},
+{
+id: 38,
+name: "Oil Level Sensor (Capacitive/Float)",
+type: "Level Detection",
+category: "level",
+principle: "Capacitive proximity or float switch mechanism",
+medium: "Hydraulic/gear box oil",
+applications: ["Power pack oil level", "Leak detection", "Low level alarm", "Overfill protection"],
+specs: {
+type: "Point level switch",
+output: "Relay, PNP/NPN",
+pressure: "Up to 100 bar",
+temp: "-40 to 150°C"
+},
+manufacturers: [
+{ name: "Endress+Hauser", model: "Liquipoint FTW23", price: "₹12,000-30,000" },
+{ name: "Vega", model: "VEGAPOINT 11", price: "₹10,000-25,000" },
+{ name: "Gems", model: "LS-7", price: "₹8,000-20,000" },
+{ name: "Madison", model: "Float Switch", price: "₹5,000-15,000" }
+],
+industry: "Curing-PCR - Hydraulic presses"
+},
+{
+id: 39,
+name: "Portable Acoustic Sensor",
+type: "Ultrasonic Leak Detection",
+category: "measurement",
+principle: "Ultrasonic microphone detects high-frequency hiss (25-40 kHz)",
+medium: "Airborne ultrasound from leaks",
+applications: ["Steam leak detection", "Nitrogen leakage", "Compressed air leaks", "Valve integrity"],
+specs: {
+frequency: "20-100 kHz (ultrasonic)",
+sensitivity: "-40 to 0 dB",
+display: "LCD with dB reading",
+power: "Battery operated"
+},
+manufacturers: [
+{ name: "UE Systems", model: "Ultraprobe 15000", price: "₹1,20,000-2,50,000" },
+{ name: "SDT", model: "SDT270", price: "₹1,40,000-2,80,000" },
+{ name: "Fluke", model: "ii900", price: "₹2,50,000-4,50,000" },
+{ name: "PCE", model: "LD 1", price: "₹80,000-1,80,000" }
+],
+industry: "Curing-PCR, Curing-TBR"
+},
+{
+id: 40,
+name: "Coriolis Flow Meter",
+type: "Mass Flow/Density",
+category: "flow",
+principle: "Coriolis force on oscillating tubes - phase shift ∝ mass flow",
+medium: "Any fluid - gas, liquid, slurry",
+applications: ["Steam mass flow", "Precise weight measurement", "Multi-variable measurement", "Batch dosing"],
+specs: {
+accuracy: "±0.1-0.5% mass flow",
+rangeability: "100:1 to 200:1",
+density: "±0.0005 g/cm³",
+output: "4-20mA, HART, Profibus"
+},
+manufacturers: [
+{ name: "Emerson Micro Motion", model: "F-Series", price: "₹2,50,000-6,00,000" },
+{ name: "Endress+Hauser", model: "Promass 83", price: "₹2,80,000-6,50,000" },
+{ name: "Siemens", model: "MASS 6000", price: "₹2,60,000-6,20,000" },
+{ name: "Krohne", model: "OPTIMASS 6400", price: "₹2,40,000-5,80,000" }
+],
+industry: "Curing-PCR, Curing-TBR"
+},
+{
+id: 41,
+name: "2D Profilometer",
+type: "2D Surface Profile",
+category: "measurement",
+principle: "Laser line scan imaging - creates cross-sectional profile",
+medium: "Non-contact optical scanning",
+applications: ["GT centering - T Ring expansion", "Surface topology", "Tread profile verification"],
+specs: {
+resolution: "±20-100 μm",
+scanWidth: "100-2000mm",
+scanRate: "100-1000 Hz",
+output: "Ethernet, image data"
+},
+manufacturers: [
+{ name: "Keyence", model: "LJ-X8000 Series", price: "₹4,50,000-9,00,000" },
+{ name: "Cognex", model: "3D-A5000", price: "₹4,00,000-8,50,000" },
+{ name: "Micro-Epsilon", model: "scanCONTROL 3000", price: "₹3,80,000-8,00,000" }
+],
+industry: "TBM-PCR - Shaping drum"
+},
+{
+id: 42,
+name: "Auto Laser Light (Alignment)",
+type: "Alignment/Centering",
+category: "optical",
+principle: "Laser line projection for visual alignment reference",
+medium: "Visible laser line",
+applications: ["B&T drum centering", "Component alignment", "Reference line projection"],
+specs: {
+laserClass: "Class 2 (eye-safe)",
+lineLength: "50-500mm",
+wavelength: "635nm (red) or 520nm (green)",
+power: "24VDC or battery"
+},
+manufacturers: [
+{ name: "Laser Tools", model: "Alignment Laser", price: "₹15,000-45,000" },
+{ name: "Banner", model: "LE550 Laser", price: "₹20,000-55,000" },
+{ name: "Omron", model: "ZG2 Laser", price: "₹18,000-50,000" },
+{ name: "Sick", model: "OLM100", price: "₹22,000-60,000" }
+],
+industry: "TBM-PCR - 2nd stage"
+},
+{
+id: 43,
+name: "Component Spotting Sensor (TBD)",
+type: "Component Detection",
+category: "optical",
+principle: "To be determined - likely vision/laser based detection",
+medium: "Visual/optical detection",
+applications: ["Component spotting on drum", "Position verification", "Presence detection"],
+specs: {
+status: "To be defined",
+application: "2nd stage building",
+technology: "Vision or laser (TBD)",
+output: "Digital I/O"
+},
+manufacturers: [
+{ name: "TBD", model: "Custom Solution", price: "To be quoted" },
+{ name: "System Integrator", model: "Application Specific", price: "Project based" }
+],
+industry: "TBM-PCR - 2nd stage building"
+},
+{
+id: 44,
+name: "Electromagnetic Flow Meter with Integrated Temperature",
+type: "Flow + Temperature",
+category: "flow",
+principle: "EMF for flow + PT100/PT1000 for temperature in single device",
+medium: "Conductive liquids",
+applications: ["Water outlet flow + temperature", "Cooling systems", "Process water monitoring"],
+specs: {
+flowAccuracy: "±0.5%",
+tempAccuracy: "±0.3°C",
+output: "Dual 4-20mA or digital",
+communication: "HART, Profibus, Modbus"
+},
+manufacturers: [
+{ name: "Siemens", model: "SITRANS FM MAG 6000", price: "₹55,000-1,40,000" },
+{ name: "Endress+Hauser", model: "Promag W", price: "₹60,000-1,50,000" },
+{ name: "Yokogawa", model: "ADMAG AXW", price: "₹58,000-1,45,000" },
+{ name: "Krohne", model: "OPTIFLUX 5300 C", price: "₹52,000-1,35,000" }
+],
+industry: "Stock - 4 Roll, Extruder"
+},
+{
+id: 45,
+name: "Ultrasonic Sensor (Defect Detection)",
+type: "Flaw Detection",
+category: "measurement",
+principle: "Ultrasonic pulse-echo - reflections from internal defects",
+medium: "Ultrasound through material",
+applications: ["Liner damage detection", "Internal flaw detection", "Delamination detection", "Thickness verification"],
+specs: {
+frequency: "1-15 MHz",
+penetration: "Up to 500mm (material dependent)",
+resolution: "0.1-1mm defect size",
+method: "Pulse-echo, through-transmission"
+},
+manufacturers: [
+{ name: "Olympus", model: "38DL PLUS", price: "₹1,80,000-3,50,000" },
+{ name: "GE Inspection", model: "USM 36", price: "₹2,00,000-4,00,000" },
+{ name: "Sonatest", model: "Veo+", price: "₹1,50,000-3,20,000" },
+{ name: "NDT Systems", model: "Flaw Detector", price: "₹1,20,000-2,80,000" }
+],
+industry: "Stock - 4 Roll Liner Rerolling"
+},
+{
+id: 46,
+name: "Float Level Sensor (Oil/Capacitive)",
+type: "Level Switch",
+category: "level",
+principle: "Magnetic float actuates reed switch or capacitive detection",
+medium: "Hydraulic/gear box oil",
+applications: ["Oil level detection", "High/low level alarm", "Pump control", "Leak detection"],
+specs: {
+type: "Float switch or capacitive",
+output: "SPDT relay, PNP/NPN",
+pressure: "Up to 100 bar",
+temperature: "-40 to 150°C"
+},
+manufacturers: [
+{ name: "Madison", model: "M1000 Series", price: "₹3,500-12,000" },
+{ name: "Gems Sensors", model: "LS-1900", price: "₹5,000-15,000" },
 { name: "Dwyer", model: "Series V6", price: "₹4,500-13,000" },
 { name: "Finetek", model: "SV10", price: "₹6,000-18,000" }
 ],
 industry: "Curing-PCR - Hydraulic presses"
 }
-];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ];
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
